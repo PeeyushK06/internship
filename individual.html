@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Individual Risk Analysis</title>
+  <link rel="stylesheet" href="individual.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Finance Risk Analytics</div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="individual.html">Individuals</a>
+      <a href="transaction.html">Transactions</a>
+      <a href="#">Reports</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Individual Risk Assessment</h1>
+    <p>Analyze financial risk for a single individual</p>
+  </section>
+
+  <!-- Form Section -->
+  <section class="form-section">
+    <form class="risk-form">
+
+      <div class="form-group">
+        <label>Age</label>
+        <input type="number" placeholder="Enter age">
+      </div>
+
+      <div class="form-group">
+        <label>Monthly Income (₹)</label>
+        <input type="number" placeholder="Enter monthly income">
+      </div>
+
+      <div class="form-group">
+        <label>Loan Amount (₹)</label>
+        <input type="number" placeholder="Enter loan amount">
+      </div>
+
+      <div class="form-group">
+        <label>Credit Score</label>
+        <input type="number" placeholder="Enter credit score">
+      </div>
+
+      <button class="btn">Analyze Risk</button>
+
+    </form>
+  </section>
+
+  <!-- Result Section -->
+  <section class="result-section">
+    <div class="result-card high">
+      <h2>Risk Level: HIGH</h2>
+      <p>
+        This individual shows a high probability of financial risk
+        due to low credit score and high loan exposure.
+      </p>
+
+      <ul>
+        <li>Credit Score below safe threshold</li>
+        <li>High loan-to-income ratio</li>
+        <li>Recommended: Manual review</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Final Year Project | Finance Risk Analytics Web Platform</p>
+    <p>© 2026</p>
+  </footer>
+
+</body>
+</html>

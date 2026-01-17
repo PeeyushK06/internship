@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard | Finance Risk Analytics</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Finance Risk Analytics</div>
+    <nav>
+      <a href="#">Dashboard</a>
+      <a href="individual.html">Individuals</a>
+      <a href="transaction.html">Transactions</a>
+      <a href="#">Reports</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Page Title -->
+  <section class="page-title">
+    <h1>Risk Analytics Dashboard</h1>
+    <p>Overview of financial risk indicators</p>
+  </section>
+
+  <!-- KPI Cards -->
+  <section class="kpi-section">
+    <div class="kpi-card">
+      <h3>Total Individuals</h3>
+      <p>1,250</p>
+    </div>
+
+    <div class="kpi-card high">
+      <h3>High Risk Cases</h3>
+      <p>320</p>
+    </div>
+
+    <div class="kpi-card medium">
+      <h3>Medium Risk Cases</h3>
+      <p>540</p>
+    </div>
+
+    <div class="kpi-card low">
+      <h3>Low Risk Cases</h3>
+      <p>390</p>
+    </div>
+  </section>
+
+  <!-- Charts Section -->
+  <section class="charts">
+    <div class="chart-box">
+      <h3>Risk Distribution</h3>
+      <img src="risk-pie.png" alt="Risk Distribution Chart">
+      <p class="note">Low / Medium / High risk segmentation</p>
+    </div>
+
+    <div class="chart-box">
+      <h3>Monthly Risk Incidents</h3>
+      <img src="risk-line.png" alt="Risk Trend Chart">
+      <p class="note">Operational & fraud risk trends</p>
+    </div>
+  </section>
+
+  <!-- High Risk Table -->
+  <section class="table-section">
+    <h2>High Risk Individuals</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Age</th>
+          <th>Income</th>
+          <th>Loan Amount</th>
+          <th>Credit Score</th>
+          <th>Risk Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>45</td>
+          <td>₹45,000</td>
+          <td>₹6,00,000</td>
+          <td>520</td>
+          <td class="risk high">High</td>
+        </tr>
+        <tr>
+          <td>38</td>
+          <td>₹50,000</td>
+          <td>₹4,80,000</td>
+          <td>540</td>
+          <td class="risk high">High</td>
+        </tr>
+        <tr>
+          <td>52</td>
+          <td>₹40,000</td>
+          <td>₹7,00,000</td>
+          <td>500</td>
+          <td class="risk high">High</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Final Year Project | Finance Risk Analytics Web Platform</p>
+    <p>© 2026</p>
+  </footer>
+
+</body>
+</html>

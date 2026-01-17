@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Transaction Risk Analysis</title>
+  <link rel="stylesheet" href="transaction.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Finance Risk Analytics</div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="individual.html">Individuals</a>
+      <a href="transaction.html">Transactions</a>
+      <a href="#">Reports</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Transaction Risk Monitoring</h1>
+    <p>Analyze and monitor risky financial transactions</p>
+  </section>
+
+  <!-- Filters -->
+  <section class="filter-section">
+    <select>
+      <option>All Risk Levels</option>
+      <option>High Risk</option>
+      <option>Medium Risk</option>
+      <option>Low Risk</option>
+    </select>
+
+    <select>
+      <option>All Transaction Types</option>
+      <option>Online Payment</option>
+      <option>ATM Withdrawal</option>
+      <option>Bank Transfer</option>
+      <option>Credit Card</option>
+    </select>
+
+    <button class="btn">Apply Filters</button>
+  </section>
+
+  <!-- Transaction Table -->
+  <section class="table-section">
+    <table>
+      <thead>
+        <tr>
+          <th>Transaction ID</th>
+          <th>Amount (₹)</th>
+          <th>Type</th>
+          <th>Location</th>
+          <th>Time</th>
+          <th>Risk Level</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>TXN1001</td>
+          <td>₹85,000</td>
+          <td>Online Payment</td>
+          <td>Mumbai</td>
+          <td>02:15 AM</td>
+          <td class="risk high">High</td>
+        </tr>
+
+        <tr>
+          <td>TXN1002</td>
+          <td>₹12,000</td>
+          <td>ATM Withdrawal</td>
+          <td>Pune</td>
+          <td>11:45 AM</td>
+          <td class="risk medium">Medium</td>
+        </tr>
+
+        <tr>
+          <td>TXN1003</td>
+          <td>₹3,500</td>
+          <td>Bank Transfer</td>
+          <td>Nagpur</td>
+          <td>03:30 PM</td>
+          <td class="risk low">Low</td>
+        </tr>
+
+        <tr>
+          <td>TXN1004</td>
+          <td>₹1,20,000</td>
+          <td>Credit Card</td>
+          <td>Delhi</td>
+          <td>01:10 AM</td>
+          <td class="risk high">High</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Risk Explanation -->
+  <section class="info-section">
+    <div class="info-card high">
+      <h3>Why Transaction is High Risk?</h3>
+      <ul>
+        <li>Unusual transaction time</li>
+        <li>High transaction amount</li>
+        <li>Location mismatch</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Final Year Project | Finance Risk Analytics Web Platform</p>
+    <p>© 2026</p>
+  </footer>
+
+</body>
+</html>
