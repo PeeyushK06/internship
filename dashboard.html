@@ -5,6 +5,7 @@
   <title>Dashboard | Finance Risk Analytics</title>
   <link rel="stylesheet" href="dashboard.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -15,8 +16,8 @@
       <a href="#">Dashboard</a>
       <a href="individual.html">Individuals</a>
       <a href="transaction.html">Transactions</a>
-      <a href="#">Reports</a>
-      <a href="#">Logout</a>
+      <a href="report.html">Reports</a>
+      <a href="index.html">Logout</a>
     </nav>
   </header>
 
@@ -53,13 +54,17 @@
   <section class="charts">
     <div class="chart-box">
       <h3>Risk Distribution</h3>
-      <img src="risk-pie.png" alt="Risk Distribution Chart">
-      <p class="note">Low / Medium / High risk segmentation</p>
+
+     <div class="donut-wrapper">
+       <canvas id="riskDistributionChart"></canvas>
+     </div>
+     <p class="note" style="margin-top: 10px;">Low / Medium / High risk segmentation</p>
     </div>
+
 
     <div class="chart-box">
       <h3>Monthly Risk Incidents</h3>
-      <img src="risk-line.png" alt="Risk Trend Chart">
+      <canvas id="monthlyRiskChart"></canvas>
       <p class="note">Operational & fraud risk trends</p>
     </div>
   </section>
@@ -105,9 +110,75 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>Final Year Project | Finance Risk Analytics Web Platform</p>
+    <p>Finance Risk Analytics Web Platform</p>
     <p>© 2026</p>
   </footer>
+
+
+  <script>
+/* Risk Distribution Doughnut Chart */
+const riskCtx = document
+  .getElementById("riskDistributionChart")
+  .getContext("2d");
+
+new Chart(riskCtx, {
+  type: "doughnut",
+  data: {
+    labels: ["Low Risk", "Medium Risk", "High Risk"],
+    datasets: [{
+      data: [390, 540, 320],
+      backgroundColor: ["#22c55e", "#facc15", "#ef4444"],
+      borderWidth: 0
+    }]
+  },
+  options: {
+    plugins: {
+      legend: {
+        labels: {
+          color: "#ffffff"
+        }
+      }
+    }
+  }
+});
+
+/* Monthly Risk Line Chart */
+const monthlyCtx = document
+  .getElementById("monthlyRiskChart")
+  .getContext("2d");
+
+new Chart(monthlyCtx, {
+  type: "line",
+  data: {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    datasets: [{
+      label: "Risk Incidents",
+      data: [45, 60, 55, 70, 65, 80],
+      borderColor: "#818cf8",
+      backgroundColor: "rgba(129, 140, 248, 0.2)",
+      tension: 0.4,
+      fill: true
+    }]
+  },
+  options: {
+    scales: {
+      x: {
+        ticks: { color: "#cbd5f5" }
+      },
+      y: {
+        ticks: { color: "#cbd5f5" }
+      }
+    },
+    plugins: {
+      legend: {
+        labels: {
+          color: "#ffffff"
+        }
+      }
+    }
+  }
+});
+</script>
 
 </body>
 </html>

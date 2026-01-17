@@ -137,3 +137,19 @@ body {
   font-size: 13px;
   color: #94a3b8;
 }
+
+
+.login-btn {
+  padding: 8px 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #7c7cff, #5f5fff);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #5f5fff, #4b4bff);
+  transform: translateY(-2px);
+}

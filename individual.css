@@ -50,7 +50,9 @@ body {
 
 /* Form */
 .form-section {
-  padding: 20px 40px;
+  padding: 40px;
+  justify-content: center;
+  display: flex;
 }
 
 .risk-form {
@@ -59,10 +61,14 @@ body {
   border-radius: 15px;
   max-width: 500px;
   border: 1px solid #1e293b;
+  
 }
 
 .form-group {
   margin-bottom: 20px;
+  align-content: center;
+  height: auto;
+  width: 100%;
 }
 
 label {
@@ -74,7 +80,7 @@ label {
 
 input {
   width: 100%;
-  padding: 12px;
+  padding: 12px 48px;
   border-radius: 8px;
   border: none;
   outline: none;
